@@ -5,7 +5,7 @@ pipeline {
       steps {
         script {
           //crear variable que contiene el archivo
-          def release = readYaml (file: 'release.yaml')
+          def release = readYaml (file: 'release.yml')
           println release.getClass().getName()
           bucle.each{k,v->
             println "La version de " + k + " es " + v
