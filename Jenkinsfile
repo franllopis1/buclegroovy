@@ -9,7 +9,7 @@ pipeline {
           //
           println bucle.getClass().getName()
           bucle.each{key,value->
-            println "La version de " + key + " es " + v
+            println "La version de " + key + " es " + value
           }
 
         }
