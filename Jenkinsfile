@@ -7,8 +7,8 @@ pipeline {
           //crear variable que contiene el archivo
           def bucle = readYaml (file: 'release.yaml')
           println bucle.getClass().getName()
-          bucle.each{key,value->
-            println "La version de " + key + " es " + value
+          bucle.each{key->
+            println "La version de " + key 
           }
         }
       }
