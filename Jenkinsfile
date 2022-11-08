@@ -8,7 +8,7 @@ pipeline {
           def bucle = readYaml (file: 'release.yaml')
           println bucle.getClass().getName()
           bucle.each{key,value->
-            println "La version de " + key +
+            println "La version de " + key + " es " + value
           }
         }
       }
