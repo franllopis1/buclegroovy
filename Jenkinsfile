@@ -8,7 +8,8 @@ pipeline {
           def bucle = readYaml (file: 'release.yaml')
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
-          bucle.each{key,value,demas->
+          escribe = writeYaml (file: 'release.yaml')
+          bucle.each{key,value->
             println "La version de " + key + " es " + value
           }
         }
