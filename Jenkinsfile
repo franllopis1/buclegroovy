@@ -9,7 +9,7 @@ pipeline {
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
           bucle.each{key,value,demas->
-            println "La version de " + key + " es " + value + " ademas " + demas
+            println "La version de " + key + " es " + value
           }
         }
       }
