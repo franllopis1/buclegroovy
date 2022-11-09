@@ -10,7 +10,7 @@ pipeline {
           println bucle.getClass().getName()
           //Determino que archivo editar y donde esta la informacion
           bucle.each{key,value->
-            println "La version de " + key + " es " + value text.replaceAll("0.0.5","1.1.5")
+            println "La version de " + key + " es " + value bucle.replaceAll("0.0.5","1.1.5")
           }
         }
       }
