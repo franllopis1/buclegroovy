@@ -14,7 +14,7 @@ pipeline {
           println bucle.getClass().getName()
           //Determino que archivo editar y donde esta la informacion
           writeYaml overwrite: true, file: archivo, data: bucle
-          assert bucle.APP_JAVA-INT == 1.1.5
+          assert bucle.APP_JAVA-INT == '1.1.5'
           println bucle
           bucle.each{key,value->
             println "La version de " + key + " es " + value
