@@ -11,8 +11,17 @@ pipeline {
           def nombre = "APP_JAVA-INT"
           def version = "1.1.5"
           //Determino que archivo editar y donde esta la informacion
+          def auch = 0
           bucle.each{key,value->
-            println "La version de " + key + " antes era " + value + " ahora es " + version
+            if (key == nombre) {
+              println "La version de " + key + " antes era " + value + " ahora es " + version
+              auch = 1
+            } else {
+              println "La version de " + key + " es " + value
+            }
+          }
+          if (auch == 0) {
+            println "La version de " + nombre + " es " + version
           }
           bucle.put(nombre, version)
           writeYaml file: 'release.yaml', data: bucle, overwrite: true
