@@ -13,7 +13,7 @@ pipeline {
           bucle.each{key,value->
             println "La version de " + key + " es " + value
           }
-          writeYaml file 'release.yaml', data: bucle, overwrite: true
+          writeYaml file: 'release.yaml', data: bucle, overwrite: true
         }
       }
     }
