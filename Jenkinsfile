@@ -12,6 +12,8 @@ pipeline {
           //Determino que archivo editar y donde esta la informacion
           bucle.each{key,value->
             println "La version de " + key + " es " + value
+            
+          writeYaml overwrite: true, file 'release.yaml', data: bucle
           }
         }
       }
