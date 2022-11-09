@@ -12,7 +12,7 @@ pipeline {
           def version = "1.1.5"
           //Determino que archivo editar y donde esta la informacion
           bucle.each{key,value->
-            println "La version de " + key + " antes era " + value + " ahora es " version
+            println "La version de " + key + " antes era " + value + " ahora es " + version
           }
           bucle.put(nombre, version)
           writeYaml file: 'release.yaml', data: bucle, overwrite: true
