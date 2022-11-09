@@ -9,9 +9,8 @@ pipeline {
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
           //Determino que archivo editar y donde esta la informacion
-          bucle.replaceAll('0.0.5','1.1.5')
           bucle.each{key,value->
-            println "La version de " + key + " es " + value
+            println "La version de " + key + " es " + value text.replaceAll("0.0.5","1.1.5")
           }
         }
       }
