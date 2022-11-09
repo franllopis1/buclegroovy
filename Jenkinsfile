@@ -14,7 +14,8 @@ pipeline {
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
           //Determino que archivo editar y donde esta la informacion
-          //writeYaml file: archivo, data: bucle
+          writeYaml file: archivo, data: bucle
+          assert bucle.0 == '1'
           bucle.each{key,value->
             println "La version de " + key + " es " + value
           }
