@@ -9,7 +9,7 @@ pipeline {
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
           //Determino que archivo editar y donde esta la informacion
-          bucle.hasProperty("APP_JAVA_INT","1.1.5")
+          bucle.replace('0.0.5','1.1.5')
           bucle.each{key,value->
             println "La version de " + key + " es " + value
           }
