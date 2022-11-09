@@ -12,6 +12,8 @@ pipeline {
           def version = "1.1.5"
           //Determino que archivo editar y donde esta la informacion
           def auch = 0
+          //Bucle donde se compara la key con la variable nombre
+          //Si coincide te cambia la version, si no coincide, pero esta en la lista te la muestra
           bucle.each{key,value->
             if (key == nombre) {
               println "La version de " + key + " antes era " + value + " ahora es " + version
@@ -20,6 +22,7 @@ pipeline {
               println "La version de " + key + " es " + value
             }
           }
+          //Si no se encuentra en la lista añade una nueva linea con los valores
           if (auch == 0) {
             println "La version de " + nombre + " es " + version
           }
