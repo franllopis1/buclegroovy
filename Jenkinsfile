@@ -8,7 +8,7 @@ pipeline {
           def bucle = readYaml (file: 'release.yaml')
           //Determina que tipo de datos es, en este caso es un Map
           println bucle.getClass().getName()
-          def nombre = "APP_JAVA-INT"
+          def nombre = "APP_JAVA-AUX"
           def version = "1.1.5"
           //Determino que archivo editar y donde esta la informacion
           def auch = 0
