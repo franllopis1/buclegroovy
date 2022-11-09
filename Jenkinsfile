@@ -26,6 +26,7 @@ pipeline {
           if (auch == 0) {
             println "La version de " + nombre + " es " + version
           }
+          //Sustituye los datos del value cuando coincida el nombre
           bucle.put(nombre, version)
           writeYaml file: 'release.yaml', data: bucle, overwrite: true
 
